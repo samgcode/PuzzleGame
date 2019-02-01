@@ -6,13 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneManegment : MonoBehaviour {
 
     public GameObject sceneManeger;
+    public PlayerControler player;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
         DontDestroyOnLoad(sceneManeger);
 	}
@@ -21,7 +16,12 @@ public class SceneManegment : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
-    public void finishLevel() {
+    public void NextLevel() {
         SceneManager.LoadScene(0);
+        player.level += 1;
+    }
+
+    public void FailLevel() {
+            
     }
 }

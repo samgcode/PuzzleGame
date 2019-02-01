@@ -37,7 +37,7 @@ public class Door : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 	{
         if(isEndDoor && other.tag == "Player") {
-            sceneManeger.finishLevel();
+            sceneManeger.NextLevel();
         }
 	}
 }

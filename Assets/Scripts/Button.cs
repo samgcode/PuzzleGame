@@ -17,4 +17,10 @@ public class Button : MonoBehaviour {
             }
         }
 	}
+    private void OnTriggerStay2D(Collider2D other)
+	{
+        if(other.tag == "Player" && Input.GetKey(KeyCode.Space)) {
+            isPressed = true;
+        } 
+	}
 }

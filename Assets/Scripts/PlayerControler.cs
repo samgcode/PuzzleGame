@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour {
 
@@ -9,7 +10,16 @@ public class PlayerControler : MonoBehaviour {
     public Animator animator;
     public float speed = 10f;
     public Rigidbody2D rb;
-	
+    public GameObject[] tutorialText;
+    public int room;
+
+    public int level;
+
+	private void Start()
+	{
+        level = 0;
+	}
+
 	void Update () {
         float x = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
         float y = Input.GetAxis("Vertical") * Time.fixedDeltaTime * speed;
@@ -59,6 +69,12 @@ public class PlayerControler : MonoBehaviour {
 	{
         string tag_ = other.tag;
 
+        if(tag_ != "Button") {
+            foreach(var text in tutorialText) {
+                text.SetActive(false);
+            }
+        }
+
         switch(tag_) {
             case "RIGHT": 
                 cam.MoveCamera("RIGHT");
@@ -76,15 +92,6 @@ public class PlayerControler : MonoBehaviour {
                 cam.MoveCamera("DOWN");
                 transform.position = new Vector3(transform.position.x, transform.position.y - 0.8f, transform.position.z);
                 break;
-        }
-	}
-	private void OnTriggerStay2D(Collider2D collision)
-	{
-        if (Input.GetKey(KeyCode.Space))
-        {
-            button.isPressed = true;
-        } else {
-            button.isPressed = false;
         }
 	}
 }
