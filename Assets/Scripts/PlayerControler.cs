@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour {
 
-    public CameraMove cam;
+    public CameraScript cam;
     public Button button;
     public Animator animator;
     public float speed = 10f;
@@ -65,14 +65,22 @@ public class PlayerControler : MonoBehaviour {
         //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         string tag_ = other.tag;
+        string name_ = other.name;
 
-        if(tag_ != "Button") {
-            foreach(var text in tutorialText) {
-                text.SetActive(false);
-            }
+        //if(tag_ != "Button") {
+        //    foreach(var text in tutorialText) {
+        //        text.SetActive(false);
+        //    }
+        //}
+
+        int roomNum;
+
+        if (int.TryParse(name_, out roomNum)) {
+            room = roomNum;
+            Debug.Log(roomNum);
         }
 
         switch(tag_) {

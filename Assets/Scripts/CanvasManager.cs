@@ -13,20 +13,22 @@ public class CanvasManager : MonoBehaviour {
             int room = player.room;
             foreach(var text in canvasText) 
             {
+                setAllInactive();
                 switch (room) 
                 {
                     case 1:
-                        setAllInactive();
+                        //setAllInactive();
                         canvasText[0].SetActive(true);
                         canvasText[1].SetActive(true);
                         break;
-                    case 2:
-                        setAllInactive();
+                    case 3:
+                        //setAllInactive();
                         canvasText[2].SetActive(true);
+                        canvasText[3].SetActive(true);
                         break;
                     case 4:
-                        setAllInactive();
-                        canvasText[3].SetActive(true);
+                        //setAllInactive();
+                        //canvasText[3].SetActive(true);
                         canvasText[4].SetActive(true);
                         break;
                     default:
