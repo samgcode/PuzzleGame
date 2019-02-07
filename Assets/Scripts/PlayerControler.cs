@@ -12,12 +12,14 @@ public class PlayerControler : MonoBehaviour {
     public Rigidbody2D rb;
     public GameObject[] tutorialText;
     public int room;
+    public SceneManegment maneger;
 
     public int level;
 
 	private void Start()
 	{
         level = 0;
+        maneger = FindObjectOfType<SceneManegment>();
 	}
 
 	void Update () {
@@ -33,6 +35,11 @@ public class PlayerControler : MonoBehaviour {
             animator.SetBool("isWalking", true);
         } else {
             animator.SetBool("isWalking", false);
+        }
+
+
+        if(Input.GetKey(KeyCode.Escape)) {
+            maneger.TitleScreen();
         }
 
         if(Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow)) {

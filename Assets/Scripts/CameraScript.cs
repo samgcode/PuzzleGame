@@ -20,6 +20,7 @@ public class CameraScript: MonoBehaviour {
         Debug.Log(Screen.width + " , " + Screen.height);
         width = Screen.width;
         height = Screen.height;
+        transform.position = new Vector3(0f, 0f, -1f);
 	}
 
 	void Awake()
