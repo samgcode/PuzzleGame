@@ -8,12 +8,15 @@ public class SceneManegment : MonoBehaviour {
     public GameObject manager;
     public PlayerControler player;
 
+    public int level_;
+
 	void Update () {
         DontDestroyOnLoad(manager);
         player = FindObjectOfType<PlayerControler>();
 	}
 
     public void StartGame() {
+        level_ = 0;
         SceneManager.LoadScene(3);
     }
 
@@ -22,12 +25,15 @@ public class SceneManegment : MonoBehaviour {
     }
 
     public void NextLevel() {
-        //SceneManager.LoadScene(player.level);
-        SceneManager.LoadScene(0);
-        player.level += 1;
+        if(level_ < 1) {
+            SceneManager.LoadScene(level_ + 4);
+        } else {
+            SceneManager.LoadScene(0);
+        }
+        level_ += 1;
     }
 
-    public void FailLevel() {
+    public void Restart() {
         Debug.Log("AHHHHHHH");
     }
 

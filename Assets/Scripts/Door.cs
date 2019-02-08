@@ -24,14 +24,12 @@ public class Door : MonoBehaviour
 
 	private void Update()
 	{
-        if (!isEndDoor) {
-            if (isOpen) {
-                renderer_.sprite = openSprite;
-                collider_.isTrigger = true;
-            } else {
-                renderer_.sprite = closedSprite;
-                collider_.isTrigger = false;
-            }
+        if (isOpen) {
+            renderer_.sprite = openSprite;
+            collider_.isTrigger = true;
+        } else {
+            renderer_.sprite = closedSprite;
+            collider_.isTrigger = false;
         }
 	}
 	private void OnTriggerEnter2D(Collider2D other)

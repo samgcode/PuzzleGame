@@ -13,16 +13,32 @@ public class PlayerControler : MonoBehaviour {
     public GameObject[] tutorialText;
     public int room;
     public SceneManegment maneger;
+    public CircleCollider2D col;
+
+    public bool devMode = false;
 
     public int level;
 
 	private void Start()
 	{
-        level = 0;
+        speed = 0.8f;
         maneger = FindObjectOfType<SceneManegment>();
+        cam = FindObjectOfType<CameraScript>();
 	}
 
 	void Update () {
+        level = maneger.level_;
+
+        if(Input.GetKey(KeyCode.LeftShift)) {
+            speed = 1.2f;
+        } else if(devMode == true) {
+            speed = 2;
+            col.isTrigger = true;
+        } else {
+            col.isTrigger = false;
+            speed = 0.8f;
+        }
+
         float x = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed;
         float y = Input.GetAxis("Vertical") * Time.fixedDeltaTime * speed;
 
