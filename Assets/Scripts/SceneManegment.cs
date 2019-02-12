@@ -4,13 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManegment : MonoBehaviour {
-
+    // ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ 8
     public GameObject manager;
     public PlayerControler player;
 
     public int level_;
 
 	void Update () {
+        //temp
+        if(Input.GetKey(KeyCode.Tab)) {
+            SceneManager.LoadScene(5);
+        }
+
+        //
+
         DontDestroyOnLoad(manager);
         player = FindObjectOfType<PlayerControler>();
 	}

@@ -10,6 +10,7 @@ TagManager:
   - UP
   - DOWN
   - Button
+  - wire
   layers:
   - Default
   - TransparentFX

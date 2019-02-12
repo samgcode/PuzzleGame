@@ -17,19 +17,18 @@ public class CanvasManager : MonoBehaviour {
                 switch (room) 
                 {
                     case 1:
-                        //setAllInactive();
                         canvasText[0].SetActive(true);
                         canvasText[1].SetActive(true);
                         break;
-                    case 3:
-                        //setAllInactive();
+                    case 2:
                         canvasText[2].SetActive(true);
+                        break;
+                    case 3:
                         canvasText[3].SetActive(true);
+                        canvasText[4].SetActive(true);
                         break;
                     case 4:
-                        //setAllInactive();
-                        //canvasText[3].SetActive(true);
-                        canvasText[4].SetActive(true);
+                        canvasText[5].SetActive(true);
                         break;
                     default:
                         setAllInactive();
