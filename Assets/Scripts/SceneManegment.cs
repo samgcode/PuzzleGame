@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManegment : MonoBehaviour {
     // ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ ∞ 8
     public GameObject manager;
-    public PlayerControler player;
+    public Player player;
 
     public int level_;
 
@@ -19,7 +19,7 @@ public class SceneManegment : MonoBehaviour {
         //
 
         DontDestroyOnLoad(manager);
-        player = FindObjectOfType<PlayerControler>();
+        player = FindObjectOfType<Player>();
 	}
 
     public void StartGame() {
@@ -41,7 +41,7 @@ public class SceneManegment : MonoBehaviour {
     }
 
     public void Restart() {
-        Debug.Log("AHHHHHHH");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Credits() {

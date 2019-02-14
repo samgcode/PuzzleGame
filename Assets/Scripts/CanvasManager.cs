@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class CanvasManager : MonoBehaviour {
 
-    public PlayerControler player;
+    public Player player;
     public GameObject[] canvasText;
+
+	private void Start()
+	{
+        player = FindObjectOfType<Player>();
+	}
 
 	void Update() {
         if(player.level == 0) 

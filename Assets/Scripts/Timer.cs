@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public Text timerText;
-    private float time = 100;
-    public int timerSecounds = 15;
+    private float time = 10;//100;
+    public int timerSecounds = 5;
+    public SceneManegment maneger;
 
     void Start()
     {
         StartCoundownTimer(timerSecounds);
+        maneger = FindObjectOfType<SceneManegment>();
     }
 
     void StartCoundownTimer(int secounds)
@@ -43,7 +45,8 @@ public class Timer : MonoBehaviour {
 
             if(min <= 0 && sec <= 0 && mil <= 0) {
                 CancelInvoke();
-                StartCoundownTimer(timerSecounds);
+                maneger.Restart();
+                //StartCoundownTimer(timerSecounds);
             }
 
         }

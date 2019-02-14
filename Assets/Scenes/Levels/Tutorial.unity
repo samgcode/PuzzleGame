@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &124794335
+--- !u!1001 &78196161
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -152,26 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114216820565178946, guid: 96efd30520e3a47e2999116c17950e4c,
-        type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 519420030}
-    - target: {fileID: 114216820565178946, guid: 96efd30520e3a47e2999116c17950e4c,
-        type: 2}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 361527486}
-    - target: {fileID: 114216820565178946, guid: 96efd30520e3a47e2999116c17950e4c,
-        type: 2}
-      propertyPath: tutorialText.Array.data[0]
-      value: 
-      objectReference: {fileID: 1018981733}
-    - target: {fileID: 114216820565178946, guid: 96efd30520e3a47e2999116c17950e4c,
-        type: 2}
-      propertyPath: tutorialText.Array.data[1]
-      value: 
-      objectReference: {fileID: 1385250331}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96efd30520e3a47e2999116c17950e4c, type: 2}
   m_IsPrefabAsset: 0
@@ -185,12 +165,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224751181599537134, guid: f0b7471eeb17746978d1e676afdcd4da,
     type: 2}
   m_PrefabInternal: {fileID: 1603682741}
---- !u!114 &297097517 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114216820565178946, guid: 96efd30520e3a47e2999116c17950e4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 124794335}
-  m_Script: {fileID: 11500000, guid: 5ce8499c3308c4d47968643f55c8ad6c, type: 3}
 --- !u!1001 &318114108
 Prefab:
   m_ObjectHideFlags: 0
@@ -304,9 +278,9 @@ MonoBehaviour:
 
     this is the timer.
 
-    if it runs out, you lose.
+    if it runs out, the level restarts.
 
-    but for now it will just restart.'
+    or you can press R to restart manualy.'
 --- !u!222 &336039821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -314,12 +288,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336039818}
   m_CullTransparentMesh: 0
---- !u!114 &361527486 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114361922539479360, guid: 9ea9285cfe1c04895a577b5ae7e1a93a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1775478684}
-  m_Script: {fileID: 11500000, guid: 13a59bbbc6cb74c7583e62a509a2eaf1, type: 3}
 --- !u!1001 &437700018
 Prefab:
   m_ObjectHideFlags: 0
@@ -372,12 +340,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 437700018}
   m_Script: {fileID: 11500000, guid: 485e481ce458b46d7a7c784e8f23364a, type: 3}
---- !u!114 &519420030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114047446708768442, guid: e68092a3c3b304bab85a01fcefb88fa1,
-    type: 2}
-  m_PrefabInternal: {fileID: 853318242}
-  m_Script: {fileID: 11500000, guid: 24f506c22b6e646ee9634391ba3e41a7, type: 3}
 --- !u!114 &620114129 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114282639282749092, guid: a6ad3b53656cb485595eb8e4feabdd30,
@@ -783,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fa84a53ff0c46f7baabbffb8aec1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 297097517}
+  player: {fileID: 0}
   canvasText:
   - {fileID: 1018981733}
   - {fileID: 1385250331}

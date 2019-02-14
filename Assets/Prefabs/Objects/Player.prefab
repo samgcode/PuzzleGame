@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4543546510128424}
   - component: {fileID: 212523061742794528}
+  - component: {fileID: 114348217953813176}
   - component: {fileID: 114216820565178946}
+  - component: {fileID: 114148791357051354}
   - component: {fileID: 50072881338525806}
   - component: {fileID: 95101099574956308}
   - component: {fileID: 58181947750475374}
@@ -97,6 +99,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114148791357051354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661203708594560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaa5ae4ba5d34dcaba9e4eeebdf2283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114348217953813176}
+  controller: {fileID: 114216820565178946}
 --- !u!114 &114216820565178946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,18 +123,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce8499c3308c4d47968643f55c8ad6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 114148791357051354}
+  player: {fileID: 114348217953813176}
+--- !u!114 &114348217953813176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661203708594560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999a338a7d9b34ed4afa65e1d8048a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  maneger: {fileID: 0}
   button: {fileID: 0}
   animator: {fileID: 95101099574956308}
-  speed: 0.8
   rb: {fileID: 50072881338525806}
-  tutorialText:
-  - {fileID: 0}
-  - {fileID: 0}
-  room: 0
-  maneger: {fileID: 0}
   col: {fileID: 58181947750475374}
+  tutorialText: []
+  speed: 10
+  inWireMenu: 0
+  canMove: 1
   devMode: 0
+  room: 0
   level: 0
 --- !u!212 &212523061742794528
 SpriteRenderer:
