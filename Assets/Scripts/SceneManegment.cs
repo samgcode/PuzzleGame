@@ -33,7 +33,7 @@ public class SceneManegment : MonoBehaviour {
 
     public void NextLevel() {
         if(level_ < 1) {
-            SceneManager.LoadScene(level_ + 4);
+            SceneManager.LoadScene(level_ + 5);
         } else {
             SceneManager.LoadScene(0);
         }
@@ -50,5 +50,9 @@ public class SceneManegment : MonoBehaviour {
 
     public void TitleScreen() {
         SceneManager.LoadScene(0);
+    }
+
+    public void ChangeLog() {
+        SceneManager.LoadScene(3);
     }
 }

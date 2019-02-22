@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Credits.unity
     guid: 336777033fc6a49a487bc56ad5f01329
   - enabled: 1
+    path: Assets/Scenes/Menus/ChangeLog.unity
+    guid: f30f05e7facec40f39f07c3efa7617de
+  - enabled: 1
     path: Assets/Scenes/Levels/Tutorial.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
