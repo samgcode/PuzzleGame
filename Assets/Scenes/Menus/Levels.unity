@@ -275,9 +275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'There is currently only one level to chose from.
-
-    come back here in a future version!'
+  m_Text: This feature hasn't been implemented yet. come back here in a future version!
 --- !u!222 &202352545
 CanvasRenderer:
   m_ObjectHideFlags: 0

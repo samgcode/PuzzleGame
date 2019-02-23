@@ -24,7 +24,7 @@ public class SceneManegment : MonoBehaviour {
 
     public void StartGame() {
         level_ = 0;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(level_ + 4);
     }
 
     public void Levels() {
